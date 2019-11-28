@@ -4,7 +4,8 @@ export default class BMI extends React.Component {
     // state variables
     state = {
         weight: 0.0,
-        height: 0.0
+        height: 0.0,
+        bmi:0.0
     }
     
     constructor(props) {
@@ -32,7 +33,9 @@ export default class BMI extends React.Component {
         let weight = parseFloat(this.state.weight);
         let height = parseFloat(this.state.height);
         let bmi = weight / (height * height);
-        alert(bmi);
+        this.setState({
+            bmi:bmi
+        })
     }
     
     render() {
@@ -52,6 +55,10 @@ export default class BMI extends React.Component {
                 />
                 
                 <button onClick={this.calculateBMI}> Calculate</button>
+                
+                <p>
+                    BMI = {this.state.bmi}
+                </p>
             </div>
         )
     }
