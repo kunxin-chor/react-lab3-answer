@@ -35,12 +35,7 @@ export default class Survey extends React.Component {
         `)
     }
     
-    displaySummary() {
-        this.setState({
-            
-        })
-    }
-    
+
     render() {
         return (
         <div>
